@@ -6,18 +6,14 @@ public class Balloon : MonoBehaviour
 {
     public int clickToPop = 3; // How many clicks until the balloon pops
     public float scaleToIncrease = 0.10f; // Each time the balloon is clicked inflate by 10%
-
+    public int scoreToGive = 100;
+    public ScoreManager scoreManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+      //Reference ScoreManager Componnent
+      scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();  
     }
 
     void OnMouseDown()
@@ -29,6 +25,9 @@ public class Balloon : MonoBehaviour
        
        if(clickToPop == 0)
        {
+        // Send points to score manager and update the score
+        scoreManager.IncreaseScoreText(scoreToGive);
+        // Destory this balloon
          Destroy(gameObject);
        }
 

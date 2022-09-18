@@ -113,8 +113,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e663dca0803daa41a24ba373d5f194a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickToPop: 7
+  clickToPop: 6
   scaleToIncrease: 0.1
+  scoreToGive: 500
+  scoreManager: {fileID: 0}
 --- !u!114 &6140448581373515328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 644e3678cf0c5cb4d8bf5ad70bf1f213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
+  moveSpeed: 3
   upperBound: 20
 --- !u!1 &822400551472955082
 GameObject:
