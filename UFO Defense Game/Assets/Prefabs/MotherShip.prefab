@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 8171587752653594920}
   - component: {fileID: 8171587752653594963}
   - component: {fileID: 5665243772290816369}
+  - component: {fileID: -2527247359659454084}
   m_Layer: 0
   m_Name: MotherShip
   m_TagString: Untagged
@@ -312,6 +313,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBounds: 30
   lowerBounds: -10
+--- !u!114 &-2527247359659454084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171587752653594921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1129c4e618075174d82357aeeb18a5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 61
 --- !u!1 &8171587753578699810
 GameObject:
   m_ObjectHideFlags: 0
