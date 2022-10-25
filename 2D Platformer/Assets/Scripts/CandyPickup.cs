@@ -7,7 +7,7 @@ public class CandyPickup : MonoBehaviour
 {
     public int itemNumber; // Store item value
     public TextMeshProUGUI ItemsCollected; // Reference visual text UI elment to change
-    public int oneCandy = 1;
+    private Rigidbody2D rB;
     /* Start is called before the first frame update
     void Start()
     {
@@ -26,9 +26,9 @@ public class CandyPickup : MonoBehaviour
         ItemsCollected.text = "Candy: "+ itemNumber + "/2"; // Updates the text to candy amount you grabbed
     }
 
-     void OnTriggerEnter(Collider other)
+     void OnTriggerEnter2d(Collider other)
     {
-        IncreaseNumber(oneCandy); //Adds the one candy
+        IncreaseNumber(1); //Adds the one candy
         Destroy(gameObject); // Destroy this game object
     }
 }   

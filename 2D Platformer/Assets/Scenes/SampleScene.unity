@@ -1122,7 +1122,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -1712,6 +1712,10 @@ PrefabInstance:
     - target: {fileID: 7103679936775153084, guid: b2acdd44eacb95c41bcceb97fe6ba4a0, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095072720309197174, guid: b2acdd44eacb95c41bcceb97fe6ba4a0, type: 3}
+      propertyPath: itemNumber
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8095072720309197174, guid: b2acdd44eacb95c41bcceb97fe6ba4a0, type: 3}
       propertyPath: ItemsCollected
