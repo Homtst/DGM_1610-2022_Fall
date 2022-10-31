@@ -23,7 +23,7 @@ public class CandyPickup : MonoBehaviour
 
     public void UpdateNumberText()
     {
-        ItemsCollected.text = "Candy: "+ itemNumber + "/2"; // Updates the text to candy amount you grabbed
+        ItemsCollected.text = "Candy: "+ itemNumber + "/3"; // Updates the text to candy amount you grabbed
     }
 
      void OnTriggerEnter2d(Collider other)
