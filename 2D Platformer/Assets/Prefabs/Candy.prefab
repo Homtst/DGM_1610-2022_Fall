@@ -203,7 +203,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemNumber: 0
   ItemsCollected: {fileID: 0}
-  oneCandy: 1
 --- !u!50 &-7500972017609026179
 Rigidbody2D:
   serializedVersion: 4
@@ -219,11 +218,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!1 &9123926915306000009
 GameObject:

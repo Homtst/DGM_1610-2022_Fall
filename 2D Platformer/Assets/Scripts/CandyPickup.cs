@@ -26,7 +26,7 @@ public class CandyPickup : MonoBehaviour
         ItemsCollected.text = "Candy: "+ itemNumber + "/3"; // Updates the text to candy amount you grabbed
     }
 
-     void OnTriggerEnter2d(Collider other)
+     void OnTriggerEnter2D(Collider2D other)
     {
         IncreaseNumber(1); //Adds the one candy
         Destroy(gameObject); // Destroy this game object
