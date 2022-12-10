@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     [Header("Player Movement")]
     public float moveSpeed;
     public float jumpForce;
+    public int curHp;
+    public int maxHp;
+
     [Header("Camera")]
     public float lookSensitivity;
     public float maxLookX;
@@ -18,15 +21,29 @@ public class PlayerController : MonoBehaviour
     
     void Awake()
     {
-        //Get Components
-        camera = Camera.main;
-        rb = GetComponent<Rigidbody>();
+        curHp = maxHp;
     }
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Get Components
+        camera = Camera.main;
+        rb = GetComponent<Rigidbody>();
+    }
+
+    //Applies Damage to the Player
+    public void TakeDamage(int damage)
+    {
+        curHp -= damage;
+        if(curHp <= 0)
+            Die();
+    }
+
+    void Die()
+    {
+        Debug.Log("Player has died! GameOver!");
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -49,8 +66,6 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = transform.right * x + transform.forward * z;
         dir.y = rb.velocity.y;
         rb.velocity = dir; // Drives movement relative to the cameras look direction
-
-        //rb.velocity = new Vector3(x, rb.velocity.y, z);
     }
 
     void CameraLook()
@@ -76,13 +91,11 @@ public class PlayerController : MonoBehaviour
 
     public void GiveHealth(int amountToGive)
     {
-        curHp = Mathf.Clamp(curHp + amountToGive, 0, maxHp);
-        GameUI.instance.UpdateHealthBar(curHp, maxHp);
+        Debug.Log("Player has been healed!");
     }
 
      public void GiveAmmo(int amountToGive)
     {
-        weapon.curAmmo = Mathf.Clamp(weapon.curAmmo + amountToGive, 0, weapon.maxAmmo);
-        GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
+        Debug.Log("Player has collected ammo!");
     }
 }

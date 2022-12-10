@@ -37,11 +37,11 @@ public class Pickup : MonoBehaviour
             switch(type)
             {
                 case PickupType.Health:
-                player.GiveHealth(healthAmount);
+                player.GiveHealth(12);
                 break;
 
                 case PickupType.Ammo:
-                player.GiveAmmo(ammoAmount);
+                player.GiveAmmo(25);
                 break;
 
                 default:
