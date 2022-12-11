@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using System.Linq;
 
 public class Enemy : MonoBehaviour
 {
@@ -30,8 +32,8 @@ public class Enemy : MonoBehaviour
     void UpdatePath()
     {
         //Calculate a path to the target
-        UnityEngine.AI.NavMeshPath navMeshPath = new UnityEngine.AI.NavMeshPath();
-        UnityEngine.AI.NavMesh.CalculatePath(transform.position, target.transform.position, UnityEngine.AI.NavMesh.AllAreas, navMeshPath);
+        NavMeshPath navMeshPath = new NavMeshPath();
+        NavMesh.CalculatePath(transform.position, target.transform.position, NavMesh.AllAreas, navMeshPath);
 
         path = navMeshPath.corners.ToList();
     }
@@ -83,3 +85,4 @@ public class Enemy : MonoBehaviour
        }
     }
 }
+
